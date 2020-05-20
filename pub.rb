@@ -2,7 +2,7 @@ class Pub
 
     attr_reader :name, :till
 
-    def initialize(name, drinks = [])
+    def initialize(name, drinks = {})
         @name = name
         @till = 0
         @drinks = drinks

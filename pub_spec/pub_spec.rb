@@ -17,7 +17,7 @@ class PubTest < MiniTest::Test
     @customer_1 = Customer.new("John", 100, 30)
     @customer_2 = Customer.new("Brian", 30, 17)
   end
-    
+
   def test_pub_can_sell_drink__above_18()
     @pub.sell_drink(@drink_1, @customer_1)
     assert_equal(10, @pub.till())
