@@ -18,5 +18,9 @@ class CustomerTest < MiniTest::Test
     assert_equal(90, @customer.wallet())
   end  
 
+  def test_alcohol_level()
+    assert_equal(7, @customer.buy_drink(@drink_1))
+  end
+
 
 end
