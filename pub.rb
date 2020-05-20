@@ -20,4 +20,6 @@ class Pub
     def check_age_of_customer(customer)
       return customer.age()
     end
+    
+
 end
