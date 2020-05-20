@@ -9,7 +9,7 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 class DrinkTest < MiniTest::Test
 
   def setup()
-    @drink = Drink.new("Carona", 5)
+    @drink = Drink.new("Carona", 5, 5)
   end
 
 

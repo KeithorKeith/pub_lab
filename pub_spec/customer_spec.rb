@@ -10,7 +10,7 @@ class CustomerTest < MiniTest::Test
 
   def setup()
     @customer = Customer.new("Keith", 100, "30")
-    @drink_1 = Drink.new("Gin", 10)
+    @drink_1 = Drink.new("Gin", 10, 7)
   end
 
   def test_buy_drink()
