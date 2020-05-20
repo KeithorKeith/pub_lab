@@ -9,9 +9,10 @@ class Pub
     end
     
     def sell_drink(drink, customer)
-        if customer.age >= 18
+        if customer.age >= 18 && customer.drunk_level <= 5
             @till += drink.price
-        elsif customer.age < 18
+    
+        elsif customer.age < 18 || customer.drunk_level > 5
             return "Get out!"
         end 
     end

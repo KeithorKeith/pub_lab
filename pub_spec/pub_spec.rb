@@ -31,9 +31,13 @@ class PubTest < MiniTest::Test
     assert_equal(30, @customer_1.age())
   end
 
-  # def test_can_sell_if_age_above_18()
-  #   @pub.check_age_of_customer(@customer)
-  #   assert_equal(18, )
-  # end
+  def test_can_sell_if_alcohol_level_low_enough()
+    @pub.sell_drink(@drink_1, @customer_1)
+    assert_equal(0, @customer_1.drunk_level())
+  end
 
+  def test_check_alcohol_level_too_high
+    @customer_1.buy_drink(@drink_1)
+    assert_equal("Get out!", @pub.sell_drink(@drink_1, @customer_1))
+  end
 end
